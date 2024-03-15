@@ -9,6 +9,13 @@ const { Content } = await product.render();
 ---
 
 <article>
-  <h1>{product.data.name}</h1>
+  <h1>
+    <a
+      href={product.data.url}
+      class="text-3xl font-bold underline text-blue-900"
+    >
+      {product.data.name}
+    </a>
+  </h1>
   <Content />
 </article>

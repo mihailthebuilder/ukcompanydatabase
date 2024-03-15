@@ -18,14 +18,16 @@ const products = (await getCollection("product")).sort(
       content="Find all UK company databases in one place."
     />
   </head>
-  <body class="flex flex-col items-center">
-    <main>
-      <section class="p-8">
+  <body class="text-[1.25rem]">
+    <main class="flex flex-col items-center">
+      <header class="py-20">
         <h1 class="text-4xl text-center font-bold">
           Find all UK company databases in one place
         </h1>
+      </header>
+      <section class="max-w-md">
+        {products.map((product) => <Product product={product} />)}
       </section>
-      {products.map((product) => <Product product={product} />)}
     </main>
   </body>
 </html>
