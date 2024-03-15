@@ -1,3 +1,11 @@
+---
+import { getCollection } from "astro:content";
+
+const products = await getCollection("product");
+
+console.log(products);
+---
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -9,7 +17,7 @@
       content="Find all UK company databases in one place."
     />
   </head>
-  <body>
+  <body class="flex flex-col items-center">
     <main>
       <section class="p-8">
         <h1 class="text-4xl text-center font-bold">
