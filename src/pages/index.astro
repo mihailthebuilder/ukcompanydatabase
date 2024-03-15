@@ -1,9 +1,10 @@
 ---
 import { getCollection } from "astro:content";
+import Product from "../components/Product.astro";
 
-const products = await getCollection("product");
-
-console.log(products);
+const products = (await getCollection("product")).sort(
+  (a, b) => a.data.rank - b.data.rank
+);
 ---
 
 <html lang="en">
@@ -24,6 +25,7 @@ console.log(products);
           Find all UK company databases in one place
         </h1>
       </section>
+      {products.map((product) => <Product product={product} />)}
     </main>
   </body>
 </html>

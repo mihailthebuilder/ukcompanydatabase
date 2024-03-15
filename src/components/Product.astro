@@ -1,0 +1,14 @@
+---
+import { type CollectionEntry } from "astro:content";
+
+type Props = { product: CollectionEntry<"product"> };
+
+const { product } = Astro.props;
+
+const { Content } = await product.render();
+---
+
+<article>
+  <h1>{product.data.name}</h1>
+  <Content />
+</article>
