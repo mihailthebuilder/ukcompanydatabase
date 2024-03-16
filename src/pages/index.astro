@@ -20,16 +20,24 @@ const products = (await getCollection("product")).sort(
     />
   </head>
   <body class="text-[1.25rem] bg-gray-50">
+    <header class="px-20 py-5">
+      <nav class="text-right">
+        <a
+          href="#"
+          class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded inline-block"
+          >Contact Us</a
+        >
+      </nav>
+    </header>
     <main class="flex flex-col items-center">
-      <header class="py-20">
-        <style></style>
+      <section class="py-10">
         <h1
           class="text-4xl text-center font-bold tracking-wide leading-snug capitalize text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-purple-600"
         >
           The directory for all UK company databases
         </h1>
-      </header>
-      <section class="max-w-lg">
+      </section>
+      <section class="max-w-lg py-10">
         {products.map((product) => <Product product={product} />)}
       </section>
     </main>
