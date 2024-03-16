@@ -14,12 +14,3 @@
     @apply underline text-blue-500 inline-block;
   }
 }
-
-@layer utilities {
-  .gradient-text {
-    background: linear-gradient(to right, #38b6ff, #6341ff);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-}
