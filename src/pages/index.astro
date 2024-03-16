@@ -54,5 +54,8 @@ const products = (await getCollection("product")).sort(
         <ContactForm client:only />
       </section>
     </main>
+    <footer class="p-3 text-center text-[1rem]">
+      &copy; {new Date().getFullYear()} Tuxedo Media. All rights reserved.
+    </footer>
   </body>
 </html>
