@@ -1,5 +1,14 @@
 .product {
   ul {
-    @apply list-disc;
+    @apply list-disc pl-6;
+  }
+
+  p,
+  ul {
+    @apply mb-3;
+  }
+
+  a {
+    @apply underline text-blue-500 inline-block;
   }
 }

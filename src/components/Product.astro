@@ -8,11 +8,11 @@ const { product } = Astro.props;
 const { Content } = await product.render();
 ---
 
-<article class="product">
-  <h1>
+<article class="product mb-10 last:mb-0">
+  <h1 class="mb-5">
     <a
       href={product.data.url}
-      class="text-3xl font-bold underline text-blue-900"
+      class="text-3xl font-bold underline text-blue-500"
     >
       {product.data.name}
     </a>

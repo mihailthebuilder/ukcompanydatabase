@@ -16,17 +16,17 @@ const products = (await getCollection("product")).sort(
     <title>UK Company Database</title>
     <meta
       name="description"
-      content="Find all UK company databases in one place."
+      content="The directory for all UK company databases"
     />
   </head>
   <body class="text-[1.25rem]">
     <main class="flex flex-col items-center">
       <header class="py-20">
         <h1 class="text-4xl text-center font-bold">
-          Find all UK company databases in one place
+          The directory for all UK company databases
         </h1>
       </header>
-      <section class="max-w-md">
+      <section class="max-w-lg">
         {products.map((product) => <Product product={product} />)}
       </section>
     </main>
